@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Моё портфолио</title>
+  <title>Портфолео</title>
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Персональное портфолио — проекты, навыки и контакты.">
 </head>
 <body>
   <header class="site-header">
-    <h1>Имя Фамилия</h1>
-    <p class="subtitle">Моя сфера деятельности</p>
+    <h1>Игорь Зайцев</h1>
+    <p class="subtitle">Моя деятельность
+    </p>
     <nav>
       <a href="#projects">Проекты</a> ·
       <a href="#skills">Навыки</a> ·
@@ -21,7 +22,7 @@
   <main>
     <section id="about">
       <h2>Обо мне</h2>
-      <p>Краткая информация обо мне. Здесь можно рассказать, кто вы, чем занимаетесь и какие у вас цели.</p>
+      <p>Я специалист в области кибербезопасности с опытом и интересом к защите цифровых систем. Мои профессиональные компетенции включают информационную безопасность и сетевые технологии, что позволяет эффективно анализировать и обеспечивать безопасность информационных систем на различных уровнях. Я стремлюсь к постоянному развитию знаний и навыков в области кибербезопасности, применению их на практике и участию в исследованиях и проектах, направленных на повышение безопасности цифровой среды.</p>
     </section>
 
     <section id="projects">
@@ -41,21 +42,35 @@
     <section id="skills">
       <h2>Навыки</h2>
       <ul class="skills">
-        <li>Навык 1</li>
-        <li>Навык 2</li>
-        <li>Навык 3</li>
+        <li>Анализ уязвимостей и проведение тестирования на проникновение.</li>
+        <li>Проектирование и защита сетевой инфраструктуры; анализ сетевого трафика.</li>
+        <li>Настройка и администрирование серверов для задач безопасности и логирования.</li>
+        <li>Работа с инструментарием для Red Team / аудит: Havoc C2, Sliver, Metasploit, Airgeddon, Bettercap.</li>
+        <li>Разработка скриптов и автоматизация: Python, Bash, C++.</li>
+        <li>Развертывание и анализ логов с использованием Elasticsearch & Kibana.</li>
       </ul>
     </section>
+    <section id="certs">
+       <div class="cert-grid" role="list" aria-label="Сертификаты">
+    <!-- CCNA -->
+    <article class="cert-card" role="listitem">
+      <h3>Ниже представлены пройденные мною курсы и сертификаты, подтверждающие компетенции в сетевых технологиях и информационной безопасности. Все сертификаты доступны для скачивания по ссылкe:</h3>
 
+      <p class="cert-actions">
+        <a class="cert-link" href="https://github.com/InKO0505/InKO505.github.io/blob/main/certificates.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+      
+      </p>
+    </article>
+    </section>
     <section id="contact">
       <h2>Контакты</h2>
-      <p>Email: <a href="mailto:example@mail.com">example@mail.com</a></p>
-      <p>GitHub: <a href="https://github.com/USERNAME" target="_blank">github.com/USERNAME</a></p>
+      <p>Email: <a href="mailto:id.zaitsev@gmail.com">id.zaitsev@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/InKO0505" target="_blank">InKO0505</a></p>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Моё портфолио</p>
+    <p>© <span id="year"></span> Портфолио </p>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
