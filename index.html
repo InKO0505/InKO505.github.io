@@ -6,12 +6,81 @@
   <title>Портфолио</title>
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Персональное портфолио — проекты, навыки и контакты.">
+  <style>
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      padding: 10px 0;
+    }
+    .carousel-track img {
+      width: 300px;
+      cursor: pointer;
+      flex-shrink: 0;
+      border-radius: 8px;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 0 12px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .carousel-btn.prev { left: 0; }
+    .carousel-btn.next { right: 0; }
+    .cert-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+    }
+    .cert-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+    }
+    .cert-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cert-modal-img {
+      max-width: 80vw;
+      max-height: 80vh;
+      border-radius: 6px;
+    }
+    .cert-modal-close,
+    .cert-modal-prev,
+    .cert-modal-next {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <h1>Игорь Зайцев</h1>
-    <p class="subtitle">Моя деятельность
-    </p>
+    <p class="subtitle">Моя деятельность</p>
     <nav>
       <a href="#projects">Проекты</a> ·
       <a href="#skills">Навыки</a> ·
@@ -23,48 +92,53 @@
   <main>
     <section id="about">
       <h2>Обо мне</h2>
-      <p>Я специалист в области кибербезопасности с опытом и интересом к защите цифровых систем. Мои профессиональные компетенции включают информационную безопасность и сетевые технологии, что позволяет эффективно анализировать и обеспечивать безопасность информационных систем на различных уровнях. Я стремлюсь к постоянному развитию знаний и навыков в области кибербезопасности, применению их на практике и участию в исследованиях и проектах, направленных на повышение безопасности цифровой среды.</p>
+      <p>Я специалист по кибербезопасности с реальным опытом и живым интересом к защите цифровых систем. Работа с информационной безопасностью и сетевыми технологиями позволяет мне глубоко анализировать и обеспечивать безопасность информационных систем на разных уровнях. Мне нравится разбираться в сложных задачах, искать уязвимости и находить практические решения для защиты данных.</p>
     </section>
 
     <section id="education">
-  <h2>Образование</h2>
-  <p><strong>Astana IT University, Астана</strong> (сентябрь 2023 – июнь 2026)<br>
-  Специальность: Информационная безопасность (Cybersecurity)<br>
-  Основные направления обучения:
-  </p>
-  <ul>
-    <li>Защита сетевых инфраструктур от киберугроз</li>
-
-    <li>Тестирование на проникновение для оценки защиты систем</li>
-  </ul>
-</section>
+      <h2>Образование</h2>
+      <p><strong>Astana IT University, Астана</strong> (сентябрь 2023 – июнь 2026)<br>
+      Специальность: Информационная безопасность (Cybersecurity)</p>
+      <ul>
+        <li>Защита сетевых инфраструктур от киберугроз</li>
+        <li>Настройка сетевых устройств: маршрутизаторы, коммутаторы, межсетевые экраны </li>
+        <li>Тестирование на проникновение для оценки защиты систем</li>
+      </ul>
+    </section>
 
     <section id="skills">
       <h2>Навыки</h2>
       <ul class="skills">
         <li>Анализ уязвимостей и проведение тестирования на проникновение.</li>
         <li>Проектирование и защита сетевой инфраструктуры; анализ сетевого трафика.</li>
-        <li>Настройка и администрирование серверов для задач безопасности и логирования.</li>
         <li>Работа с инструментарием для Red Team / аудит: Havoc C2, Sliver, Metasploit, Airgeddon, Bettercap.</li>
         <li>Разработка скриптов и автоматизация: Python, Bash, C++.</li>
         <li>Развертывание и анализ логов с использованием Elasticsearch & Kibana.</li>
       </ul>
     </section>
 
-    <section id="certs">
-       <div class="cert-grid" role="list" aria-label="Сертификаты">
-    <!-- CCNA -->
-    <article class="cert-card" role="listitem">
-      <h3>Ниже представлены пройденные мною курсы и сертификаты, подтверждающие компетенции в сетевых технологиях и информационной безопасности. Все сертификаты доступны для скачивания по ссылкe:</h3>
+    <h3>Галерея моих сертификатов</h3>
 
-      <p class="cert-actions">
-        <a class="cert-link" href="https://github.com/InKO0505/InKO505.github.io/blob/main/certificates.pdf" target="_blank" rel="noopener">Скачать PDF</a>
-      
-      </p>
-    </article>
-    </section>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="certs/1.png" alt="Certificate 1">
+        <img src="certs/2.png" alt="Certificate 2">
+        <img src="certs/3.png" alt="Certificate 3">
+        <img src="certs/4.png" alt="Certificate 4">
+        <img src="certs/5.png" alt="Certificate 5">
+        <img src="certs/6.png" alt="Certificate 6">
+        <img src="certs/7.png" alt="Certificate 7">
+        <img src="certs/8.png" alt="Certificate 8">
+        <img src="certs/9.png" alt="Certificate 9">
+        <img src="certs/10.png" alt="Certificate 10">
+        <img src="certs/11.png" alt="Certificate 11">
+        <img src="certs/12.png" alt="Certificate 12">
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
 
-    <section id="projects">
+      <section id="projects">
       <h2>Проекты</h2>
       <ul class="projects-list">
         <li>
@@ -79,33 +153,129 @@
       </ul>
     </section>
 
-    
-
     <section id="experience">
       <h2>Опыт работы / практика</h2>
       <p><strong>Производственная практика — АО «Казахстанская Жилищная Компания»</strong> (июнь–июль 2025)<br>
-    - Тестирование SOC- и DLP-систем: анализ алертов, классификация инцидентов, составление отчётов<br>
-  - Разработка и интеграция Docker-контейнера для автоматической пересылки логов<br>
-  - Работа с водяными знаками и маркировкой документов для предотвращения утечек данных<br>
-  - Изучение международных стандартов ISO/IEC 27001 и 27002 и их применение<br>
-  - Анализ нормативных документов РК и взаимодействие с профильными органами ИБ<br>
-  <h3>Полная характеристика доступна для скачивания: <a href="https://github.com/InKO0505/InKO505.github.io/blob/main/characteristic.pdf" target="_blank" rel="noopener">Скачать PDF</a></h3>
-    </p>
+      - Тестирование SOC- и DLP-систем: анализ алертов, классификация инцидентов, составление отчётов<br>
+      - Разработка и интеграция Docker-контейнера для автоматической пересылки логов<br>
+      - Работа с водяными знаками и маркировкой документов для предотвращения утечек данных<br>
+      - Изучение международных стандартов ISO/IEC 27001 и 27002 и их применение<br>
+      - Анализ нормативных документов РК и взаимодействие с профильными органами ИБ<br>
+      <h3>Полная характеристика доступна для скачивания: <a href="https://github.com/InKO0505/InKO505.github.io/blob/main/characteristic.pdf" target="_blank" rel="noopener">Скачать PDF</a></h3>
+      </p>
     </section>
-    
 
     <section id="contact">
       <h2>Контакты</h2>
       <p>Email: <a href="mailto:id.zaitsev@gmail.com">id.zaitsev@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/InKO0505" target="_blank">InKO0505</a></p>
+      <p>GitHub: <a href="https://github.com/InKO0505" target="_blank">InKO0505</a></p>
     </section>
   </main>
 
   <footer>
     <p>© <span id="year"></span> Портфолио </p>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel-track');
+      const btnPrev = document.querySelector('.carousel-btn.prev');
+      const btnNext = document.querySelector('.carousel-btn.next');
+      const imgs = Array.from(track.querySelectorAll('img'));
+      let cardWidth = 300;
+      let startX = 0;
+      let scrollStart = 0;
+      let isDragging = false;
+      let modal = null;
+      let currentIndex = 0;
+
+      function recalcSizes() {
+        if (!imgs.length) return;
+        const r1 = imgs[0].getBoundingClientRect();
+        let gap = 20;
+        if (imgs[1]) {
+          const r2 = imgs[1].getBoundingClientRect();
+          gap = Math.max(0, Math.round(r2.left - r1.right));
+        }
+        cardWidth = Math.round(r1.width + gap);
+      }
+
+      recalcSizes();
+      window.addEventListener('resize', recalcSizes);
+
+      function scrollByCards(n = 1) {
+        track.scrollBy({ left: n * cardWidth, behavior: 'smooth' });
+      }
+
+      btnPrev.addEventListener('click', () => scrollByCards(-1));
+      btnNext.addEventListener('click', () => scrollByCards(1));
+
+      track.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX = e.clientX;
+        scrollStart = track.scrollLeft;
+        track.classList.add('dragging');
+      });
+
+      window.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        track.scrollLeft = scrollStart + (startX - e.clientX);
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.classList.remove('dragging');
+      });
+
+      function createModal() {
+        const m = document.createElement('div');
+        m.className = 'cert-modal';
+        m.innerHTML = `
+          <div class="cert-modal-backdrop"></div>
+          <div class="cert-modal-content">
+            <button class="cert-modal-close">&times;</button>
+            <button class="cert-modal-prev">&#10094;</button>
+            <img class="cert-modal-img" src="" alt="">
+            <button class="cert-modal-next">&#10095;</button>
+          </div>
+        `;
+        document.body.appendChild(m);
+        return m;
+      }
+
+      function openModal(idx) {
+        if (!modal) modal = createModal();
+        modal.style.display = 'block';
+        currentIndex = idx;
+        modal.querySelector('.cert-modal-img').src = imgs[idx].src;
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.style.display = 'none';
+      }
+
+      function showNext(n = 1) {
+        currentIndex = (currentIndex + n + imgs.length) % imgs.length;
+        modal.querySelector('.cert-modal-img').src = imgs[currentIndex].src;
+      }
+
+      track.addEventListener('click', e => {
+        const img = e.target.closest('img');
+        if (!img) return;
+        openModal(imgs.indexOf(img));
+      });
+
+      document.addEventListener('click', e => {
+        if (!modal) return;
+        if (e.target.matches('.cert-modal-close') || e.target.matches('.cert-modal-backdrop')) closeModal();
+        else if (e.target.matches('.cert-modal-next')) showNext(1);
+        else if (e.target.matches('.cert-modal-prev')) showNext(-1);
+      });
+    });
+  </script>
 </body>
 </html>
