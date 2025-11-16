@@ -218,3 +218,21 @@ footer {
 .cert-modal-next {
   background: rgba(255,255,255,0.9);
 }
+
+.role {
+  color: #9aa4af;
+  font-size: 0.9rem;
+  font-family: monospace;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
