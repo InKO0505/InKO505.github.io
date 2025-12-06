@@ -44,15 +44,19 @@
     </section>
 
     <section id="skills">
-      <h2>Навыки</h2>
-      <ul class="skills">
-        <li>Анализ уязвимостей и проведение тестирования на проникновение.</li>
-        <li>Проектирование и защита сетевой инфраструктуры; анализ сетевого трафика.</li>
-        <li>Работа с инструментарием для Red Team / аудит: Havoc C2, Sliver, Metasploit, Airgeddon, Bettercap.</li>
-        <li>Разработка скриптов и автоматизация: Python, Bash, C++.</li>
-        <li>Развертывание и анализ логов с использованием Elasticsearch & Kibana.</li>
-      </ul>
-    </section>
+    <h2>Навыки</h2>
+    <ul class="skills">
+      <li>Анализ уязвимостей и проведение тестирования на проникновение.</li>
+      <li>Проектирование и защита сетевой инфраструктуры; анализ сетевого трафика.</li>
+      <li>Работа с инструментарием для Red Team / аудит: Havoc C2, Sliver, Metasploit, Airgeddon, Bettercap.</li>
+      <li>Разработка скриптов и автоматизация: Python, Bash, C++.</li>
+      <li>Развертывание и анализ логов с использованием Elasticsearch & Kibana.</li>
+      <li>Администрирование серверов Linux (Rocky, Ubuntu, Arch).</li>
+      <li>Развертывание и обслуживание Proxmox VE, настройка виртуальной инфраструктуры.</li>
+      <li>Настройка и сопровождение DPI-серверов.</li>
+    </ul>
+</section>
+
 
     <h3>Галерея моих сертификатов</h3>
 
@@ -76,21 +80,39 @@
     </div>
 
       <section id="projects">
-      <h2>Проекты</h2>
-      <ul class="projects-list">
-        <li>
-         <h3>Vulnerability Scanning with Kali Tools</h3>
-<p>Провёл работу по сканированию уязвимостей с использованием Kali Linux: Nmap и Greenbone Vulnerability Management (GVM). Выполнил сетевое сканирование, идентификацию сервисов и оценку обнаруженных уязвимостей. В проекте представлены результаты сканирования.</p>
-  <p><a href="https://github.com/InKO0505/InKO505.github.io/blob/main/labgvm.pdf">Смотреть</a></p>
-        </li>
-        <li>
-          <h3>Wireless Security Audit – Personal Wi‑Fi Network</h3>
-          <p> Провёл аудит безопасности своей домашней Wi‑Fi сети с использованием инструментов Kali Linux. 
-      Проанализировал защищённость пароля и конфигурацию сети.<br>
-      <a href="#">Смотреть</a></p>
-        </li>
-      </ul>
-    </section>
+
+
+  <h2>Проекты</h2>
+  <ul class="projects-list">
+    <li>
+      <h3>Vulnerability Scanning with Kali Tools</h3>
+      <p>Провёл работу по сканированию уязвимостей с использованием Kali Linux: Nmap и Greenbone Vulnerability Management (GVM). Выполнил сетевое сканирование, идентификацию сервисов и оценку обнаруженных уязвимостей. В проекте представлены результаты сканирования.</p>
+      <p><a href="https://github.com/InKO0505/InKO505.github.io/blob/main/labgvm.pdf">Смотреть</a></p>
+    </li>
+    <li>
+      <h3>Wireless Security Audit – Personal Wi‑Fi Network</h3>
+      <p>Провёл аудит безопасности своей домашней Wi‑Fi сети с использованием инструментов Kali Linux. Проанализировал защищённость пароля и конфигурацию сети.</p>
+      <p><a href="#">Смотреть</a></p>
+    </li>
+    <li>
+      <h3>Dynamic Runtime Protection for Mobile Banking Applications (research project)</h3>
+      <p>
+        Исследовательский проект в рамках дипломной работы. 
+        Разрабатываю метод динамической защиты мобильных банковских приложений 
+        с использованием механизмов поведенческого анализа, перехвата системных вызовов 
+        и обнаружения вредоносной активности во время выполнения.
+        В проект входит анализ существующих техник динамического анализа, 
+        построение прототипа защитного модуля и проверка эффективности защиты.
+      </p>
+      <div class="dev-badge">
+        <span class="pulse"></span>
+        В разработке
+      </div>
+    </li>
+  </ul>
+</section>
+
+
 
     <section id="experience">
       <h2>Опыт работы / практика</h2>
@@ -104,11 +126,13 @@
       </p>
       <br>
 
-  <p><strong><h3>Kazdream - Telecom Administrator</strong> (ноябрь 2025 – настоящее время)</h3>
-  - Администрирование сетевой инфраструктуры компании: настройка и мониторинг оборудования<br>
-  - Поддержка и настройка VoIP и телеком-сервисов<br>
-  - Управление сетевыми учетными записями и доступами сотрудников<br>
-  </p>
+      <p><strong><h3>7Generation – Infrastructure & Troubleshooting Engineer</strong> (ноябрь 2025 – настоящее время)</h3>
+      - Обслуживание и администрирование серверной инфраструктуры компании<br>
+      - Настройка, поддержка и мониторинг DPI-серверов<br>
+      - Администрирование сетевой инфраструктуры: настройка и мониторинг сетевого оборудования<br>
+      - Диагностика и устранение инцидентов в инфраструктуре <br>
+</p>
+
 </section>
     </section>
   
@@ -223,7 +247,7 @@
         else if (e.target.matches('.cert-modal-next')) showNext(1);
         else if (e.target.matches('.cert-modal-prev')) showNext(-1);
       });
-      const words = ['Cybersecurity Specialist', 'Network Defender', 'Penetration Tester'];
+      const words = ['Cybersecurity Specialist', 'Network Defender', 'Penetration Tester', 'Infrastructure Engineer'];
 let i = 0, j = 0;
 const el = document.getElementById('typing');
 
@@ -234,9 +258,9 @@ const el = document.getElementById('typing');
   if(j === word.length){
     i = (i + 1) % words.length;
     j = 0;
-    setTimeout(type, 1200); // пауза перед новым словом
+    setTimeout(type, 1200); 
   } else {
-    setTimeout(type, 80); // скорость печати
+    setTimeout(type, 80); 
   }
 })();
 
